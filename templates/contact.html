@@ -1,0 +1,100 @@
+{% extends 'index.html' %} {% block content %}
+<style>
+  .mb-3 label {
+    color: white;
+  }
+  .contact_links {
+    padding: 5px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-evenly;
+  }
+</style>
+<div
+  class="container w3-animate-top"
+  style="
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 35px;
+  "
+>
+  <br />
+  <h3 style="color: white">Contact</h3>
+  <hr />
+  <form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleFormControlInput" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Enter your name"
+        required
+        name="name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Enter your mail"
+        required
+        name="email"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Message</label
+      >
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="6"
+        placeholder="Enter your message"
+        required
+        name="message"
+      ></textarea>
+    </div>
+    <button class="btn btn-primary mx-auto" type="submit">send message</button>
+  </form>
+  <div class="mb-3 contact_links">
+    <a href="https://www.facebook.com/shiju.sivadazz/" target="_blank"
+      ><i class="fa-brands fa-facebook"></i
+    ></a>
+    <a href="https://www.instagram.com/shiju_sivadazzz/" target="_blank"
+      ><i class="fa-brands fa-instagram"></i
+    ></a>
+    <a href="https://x.com/sivadazz19094" target="_blank"
+      ><i class="fa-brands fa-twitter"></i
+    ></a>
+    <a href="https://www.linkedin.com/in/shiju-s-53a892259/" target="_blank"
+      ><i class="fa-brands fa-linkedin"></i
+    ></a>
+    <a
+      href="https://www.google.com/maps/dir/Mudappallur,+Kerala/Mudappallur/@10.5895243,76.5158493,18.45z/data=!4m13!4m12!1m5!1m1!1s0x3ba8096467275dc1:0x734afbf9f1943940!2m2!1d76.5172685!2d10.5903918!1m5!1m1!1s0x3ba8096467275dc1:0x734afbf9f1943940!2m2!1d76.5172685!2d10.5903918?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+      target="_blank"
+      ><i class="fa-solid fa-location-dot"></i
+    ></a>
+    <a href="https://github.com/shiju-sivadasan" target="_blank"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+    <a href="https://www.youtube.com/@shiju_sivadazzz" target="_blank"
+      ><i class="fa-brands fa-youtube"></i
+    ></a>
+    <a href="mailto:shijusivadazz86@gmail.com" target="_blank"
+      ><i class="fa-solid fa-at"></i
+    ></a>
+  </div>
+</div>
+{% endblock %}

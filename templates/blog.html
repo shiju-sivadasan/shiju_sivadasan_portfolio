@@ -1,0 +1,36 @@
+{% extends 'index.html' %} {% block content %}
+<style>
+  h3,p
+  {
+    color:white
+  }
+</style>
+<div
+  class="container w3-animate-left"
+  style="
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 35px;
+  "
+>
+  <br />
+  <h3 style="color: white">Blog</h3>
+  <hr />
+  {%for data in b_data reversed %}
+  <div class="container">
+    <h3>{{ data.b_title }}</h3>
+    <br>
+    <a href="{{ data.b_image.url }}"><img src="{{ data.b_image.url }}" alt="project_image" height=200 width=300 style="border-radius:5px"></a>
+    <br>
+    <br>
+    <p>{{ data.b_desc }}</p>
+    <p>Link :<a href="{{ data.b_link }}" target="_blank">{{ data.b_link }}</a></p>
+  </div>
+  <br>
+  {% endfor %}
+</div>
+{% endblock %}

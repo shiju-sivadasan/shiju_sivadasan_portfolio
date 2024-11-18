@@ -1,0 +1,38 @@
+{% extends 'index.html' %} {% block content %}
+<div
+  class="container w3-animate-right"
+  style="
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 35px;
+  "
+>
+  <br />
+  <h3 style="color: white">Experience</h3>
+  <hr />
+  {% for exp in experience reversed%}
+  <p style="color: white"><b>{{ exp.time_period }}</b></p>
+  <p style="color: white">{{ exp.company }}</p>
+  <ul>
+    <li style="color: white">{{ exp.position }}</li>
+
+    <li style="color: white">
+      {{ exp.point_1 }}
+    </li>
+    <br />
+    <li style="color: white">
+      {{ exp.point_2 }}
+    </li>
+
+    <li style="color: white">
+      {{ exp.point_3 }}</li>
+      <li style="color: white">
+        {{ exp.point_4 }}</li>
+  </ul>
+  {% endfor %}
+</div>
+{% endblock %}

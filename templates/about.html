@@ -1,0 +1,63 @@
+{% extends 'index.html' %} {% block content %}
+<style>
+  img {
+    height: 210px;
+    width: 150px;
+    border-radius: 10px;
+  }
+  p
+  {
+    margin-top:30px;
+    color:white;
+    font-family:monospace;
+    padding:10px
+  }
+  a
+  {
+    text-decoration : none;
+    color:white
+  }
+  button{
+    margin-top:5px;
+    width:155px
+  }
+</style>
+<div
+  class="container w3-animate-right"
+  style="
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 35px;
+  "
+>
+  <br />
+  <h3 style="color: white">About</h3>
+  <hr />
+  <div>
+    <img src="../static/images/my profile.jpg" alt="profile pic of me" />
+  </div>
+ <button class="btn btn-primary"><a href="../static/files/shiju.s.pdf" download class="download-btn">Resume</a></button>
+  <br>
+<button class="btn btn-primary"><a href="{% url 'generate_qr_code' %}" target="_blank">QR Code</a></button>
+  <p>
+  Hello! I'm Shiju, a passionate and driven junior software developer with a
+  Bachelor’s degree in Computer Science. My journey in tech began with an
+  internship where I gained hands-on experience in Django development, and I'm
+  now contributing to the IT industry at Cybrosys Technologies. Here, I'm
+  currently focused on optimizing PostgreSQL by diving into its source code,
+  enhancing performance through detailed exploration and refinement.
+  <br>
+  <br> Aside from
+  coding, I love to challenge myself every week with new projects that allow me
+  to build something interesting and valuable. I'm also an avid reader who keeps
+  up with the latest in tech news, articles, and books. My interests extend to
+  traveling, exploring food cultures, and learning from every experience.
+  Looking forward to making a meaningful impact and sharing my learnings with
+  the tech community!
+  </p>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'index.html' %} {% block content %}
+<style>
+  h3
+  {
+    color:white
+  }
+  p
+  {
+    color:white
+  }
+</style>
+<div
+  class="container w3-animate-bottom"
+  style="
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    -webkit-backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 35px;
+  "
+>
+  <br />
+  <h3 style="color: white">Project</h3>
+  <hr />
+  {%for data in p_data %}
+  <div class="container">
+    <h3>{{ data.p_name }}</h3>
+    <br>
+    <a href="{{ data.p_image.url }}"><img src="{{ data.p_image.url }}" alt="project_image" height=200 width=300 style="border-radius:5px"></a>
+    <br>
+    <br>
+    <p>{{ data.p_desc }}</p>
+    <p>Link :<a href="{{ data.p_link }}" target="_blank">{{ data.p_link }}</a></p>
+  </div>
+  <br>
+  {% endfor %}
+</div>
+{% endblock %}
