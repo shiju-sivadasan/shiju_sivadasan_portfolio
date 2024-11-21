@@ -141,7 +141,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Directory where static files will be collected (for deployment)
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Directories for additional static files (for development)
 STATICFILES_DIRS = [
