@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-h$0pk6%t2wtn!smg67w3p(fgu5-geedw)&oykc=&7i7nd^+c)w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER' not in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -141,7 +141,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Directory where static files will be collected (for deployment)
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Directories for additional static files (for development)
 # STATICFILES_DIRS = [
